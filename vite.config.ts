@@ -15,6 +15,7 @@ export default defineConfig(({mode}) => {
     const env = loadEnv(mode, process.cwd());
     // console.log(env);
     return {
+        base: env.VITE_BASE_URL,
         cacheDir: 'node_modules/.my-vite-cache',
         optimizeDeps: {
             exclude: ['lodash'],
@@ -131,7 +132,7 @@ export default defineConfig(({mode}) => {
             //     'src/views/CView.vue',
             //     'src/views/DView.vue'
             // ]),
-            prefetchLazyPlugin(['AView', 'BView', 'CView', 'DView']),
+            prefetchLazyPlugin(['AView', 'BView', 'CView', 'DView'], env.VITE_BASE_URL),
             // gzip压缩 生产环境生成 .gz 文件
             // viteCompression({
             //     verbose: true,

@@ -1,5 +1,5 @@
 // 定义插件函数，接收需要预加载的文件路径数组作为参数
-export const prefetchLazyPlugin = (paths: string[] = []) => {
+export const prefetchLazyPlugin = (paths: string[] = [], baseUrl: string = '/') => {
     // 存储匹配到的需要预加载的脚本文件路径
     const scriptArrs: string[] = [];
 
@@ -31,7 +31,7 @@ export const prefetchLazyPlugin = (paths: string[] = []) => {
               if (matchedPath) {
                   // console.log('item', item.fileName);
                   // 将匹配的文件路径添加到预加载列表中
-                  scriptArrs.push('/' + item.fileName);
+                  scriptArrs.push(baseUrl + item.fileName);
               }
             });
             // console.log('isWrite', isWrite);

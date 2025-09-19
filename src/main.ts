@@ -18,5 +18,5 @@ app.use(createPinia());
 app.use(router);
 
 app.mount('#app');
-// const obj = {name: 'dawei', age: 18};
+// const obj = {name: 'john', age: 18};
 // const arr = [1, 2, 3, 4, 5];

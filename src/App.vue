@@ -3,7 +3,6 @@ import {onMounted} from 'vue';
 import {RouterLink, RouterView} from 'vue-router';
 import HelloWorld from './components/HelloWorld.vue';
 import {getTopicsInfo} from './api/user';
-const url = import.meta.env.VITE_API_URL;
 
 onMounted(() => {
     // https://cnodejs.org/api/v1/get/topics
@@ -22,18 +21,14 @@ onMounted(() => {
 
 <template>
     <header>
-        <h1>{{ url }}</h1>
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-        <div class="wrapper">
-            <HelloWorld msg="You did it!" />
-
-            <nav>
-                <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/about">About</RouterLink>
-            </nav>
-        </div>
+        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="60" />
     </header>
+    <div class="wrapper">
+        <nav>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+        </nav>
+    </div>
 
     <RouterView />
 </template>
@@ -42,6 +37,7 @@ onMounted(() => {
 header {
     line-height: 1.5;
     max-height: 100vh;
+    width:100%;
 }
 
 .logo {

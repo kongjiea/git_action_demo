@@ -12,7 +12,9 @@
         "type-check": "vue-tsc --build",
         "lint": "eslint . --fix",
         "format": "prettier --write src/",
-        "prepare": "husky"
+        "prepare": "husky",
+        "deploy:unix": "sh ./scripts/deploy.sh",
+        "deploy:win": "\"D:\\soft\\Git\\bin\\sh.exe\" ./scripts/deploy.sh"
     },
     "dependencies": {
         "axios": "^1.8.4",

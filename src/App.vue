@@ -13,9 +13,9 @@ onMounted(() => {
     //   .then(response => response.json())
     //   .then(data => console.log(data))
 
-    getTopicsInfo().then((data) => {
-        console.log(data.data);
-    });
+    // getTopicsInfo().then((data) => {
+    //     console.log(data.data);
+    // });
 });
 </script>
 

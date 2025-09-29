@@ -15,7 +15,7 @@ ssh $REMOTE_HOST "rm -rf $REMOTE_PATH/*"
 
 # 上传新文件
 echo "🚀 上传新的 dist 到服务器..."
-scp -r ../dist/* $REMOTE_HOST:$REMOTE_PATH
+scp -r ./dist/* $REMOTE_HOST:$REMOTE_PATH
 
 # 重载 nginx（非全局路径）
 echo "♻️ 重新加载 nginx..."
